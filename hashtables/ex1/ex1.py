@@ -14,6 +14,8 @@ def get_indices_of_item_weights(weights, length, limit):
 
     if len(weights) < 2:
         return None
+    elif len(weights) == 2 and weights[0] == weights[1]:
+        return (1, 0)
     else:
         weights_list = []
         for weight in weights:
