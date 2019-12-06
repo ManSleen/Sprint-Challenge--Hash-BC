@@ -9,6 +9,9 @@ class LinkedPair:
         self.value = value
         self.next = None
 
+    def __str__(self):
+        return f"Key: {self.key}, Value: {self.value}"
+
 
 # '''
 # Resizing hash table
@@ -17,6 +20,15 @@ class HashTable:
     def __init__(self, capacity):
         self.capacity = capacity
         self.storage = [None] * capacity
+
+    def print(self):
+        for node in self.storage:
+            print(node)
+            if node is not None and node.next is not None:
+                current_node = node
+                while current_node.next is not None:
+                    current_node = current_node.next
+                    print(current_node)
 
 
 # '''
