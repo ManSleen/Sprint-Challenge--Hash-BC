@@ -12,7 +12,7 @@ from random import seed
 
 DIFFICULTY = 6
 
-seed(1)
+seed(5)
 
 
 def proof_of_work(last_proof):
@@ -36,7 +36,7 @@ def proof_of_work(last_proof):
     return proof
 
 
-def valid_proof(last_hash, proof):
+def valid_proof(last_proof, proof):
     """
     Validates the Proof:  Multi-ouroborus:  Do the last six characters of
     the hash of the last proof match the first six characters of the hash
@@ -45,8 +45,13 @@ def valid_proof(last_hash, proof):
     IE:  last_hash: ...AE9123456, new hash 123456E88...
     """
 
-    # TODO: Your code here!
-    pass
+    guess = f'{proof}'.encode()
+    guess_hash = hashlib.sha256(guess).hexdigest()
+
+    previous_proof = f'{last_proof}'.encode()
+    previous_hash = hashlib.sha256(previous_proof).hexdigest()
+
+    return guess_hash[:DIFFICULTY] == previous_hash[-DIFFICULTY:]
 
 
 if __name__ == '__main__':
