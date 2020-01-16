@@ -1,8 +1,19 @@
 {
-    "python.pythonPath": "/Users/briandoyle/.local/share/virtualenvs/sc-hash-bc-student-HSwDRd-G/bin/python",
+    "python.pythonPath": "/usr/bin/python3",
     "workbench.colorCustomizations": {
-        "activityBar.background": "#242E3C",
-        "titleBar.activeBackground": "#334054",
-        "titleBar.activeForeground": "#F9FAFC"
-    }
+        "activityBar.background": "#242f3c",
+        "activityBar.activeBorder": "#8b546d",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#8b546d",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "titleBar.activeBackground": "#11161c",
+        "titleBar.inactiveBackground": "#11161c99",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveForeground": "#e7e7e799",
+        "statusBar.background": "#11161c",
+        "statusBarItem.hoverBackground": "#242f3c",
+        "statusBar.foreground": "#e7e7e7"
+    },
+    "peacock.remoteColor": "#11161c"
 }
